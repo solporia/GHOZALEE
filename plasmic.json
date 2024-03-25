@@ -246,6 +246,11 @@
           "id": "7BYnFbB1mrXE",
           "name": "gozalee.png",
           "filePath": "../public/plasmic/website_starter/images/gozaleepng.png"
+        },
+        {
+          "id": "BsAflBgSwT4e",
+          "name": "gozali.png",
+          "filePath": "../public/plasmic/website_starter/images/gozalipng.png"
         }
       ],
       "indirect": false,

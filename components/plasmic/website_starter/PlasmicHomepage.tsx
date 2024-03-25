@@ -63,7 +63,6 @@ import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import { NavigationBar } from "@plasmicpkgs/plasmic-nav";
 import Button from "../../Button"; // plasmic-import: ChY5yskcrU9C/component
 import YouTube from "@plasmicpkgs/react-youtube";
-import { Iframe } from "@plasmicpkgs/plasmic-basic-components";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -97,7 +96,6 @@ export type PlasmicHomepage__OverridesType = {
   button?: Flex__<typeof Button>;
   columns?: Flex__<"div">;
   youTube?: Flex__<typeof YouTube>;
-  iframe?: Flex__<typeof Iframe>;
 };
 
 export interface DefaultHomepageProps {}
@@ -358,7 +356,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 )}
               >
                 {
-                  "Ghozali RWA is the first elon memecoin linked to a RWA (Real World Asset)"
+                  "Ghozali RWA is the first ghozali memecoin linked to a RWA (Real World Asset)"
                 }
               </div>
               <PlasmicImg__
@@ -385,7 +383,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 className={classNames("__wab_instance", sty.button)}
                 color={"white"}
               >
-                {"BUY $GhozaliRWA"}
+                {"$GRWA"}
               </Button>
               <Embed
                 className={classNames("__wab_instance", sty.embedHtml__v4OP)}
@@ -403,19 +401,31 @@ function PlasmicHomepage__RenderFunc(props: {
                   <YouTube
                     data-plasmic-name={"youTube"}
                     data-plasmic-override={overrides.youTube}
+                    cc_load_policy={true}
                     className={classNames("__wab_instance", sty.youTube)}
+                    loop={true}
+                    playsinline={false}
+                    rel={false}
                     videoId={"watch?v=NvnO1TMN-_4"}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column__kQLhu)}>
-                  <Iframe
-                    data-plasmic-name={"iframe"}
-                    data-plasmic-override={overrides.iframe}
-                    className={classNames("__wab_instance", sty.iframe)}
-                    preview={true}
-                    src={
-                      "https://www.dextools.io/widget-chart/en/solana/pe-light/HqCw8XA3HRwCM8L9Sf6QXCu3vTiCvS4iiyBTmea2ZoGr?theme=light&chartType=2&chartResolution=30&drawingToolbars=false"
-                    }
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__kcKw0)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/website_starter/images/gozalipng.png",
+                      fullWidth: 800,
+                      fullHeight: 571,
+                      aspectRatio: undefined
+                    }}
                   />
                 </div>
               </div>
@@ -437,26 +447,16 @@ const PlasmicDescendants = {
     "text",
     "button",
     "columns",
-    "youTube",
-    "iframe"
+    "youTube"
   ],
   navigationBar: ["navigationBar", "h4"],
   h4: ["h4"],
-  section: [
-    "section",
-    "freeBox",
-    "text",
-    "button",
-    "columns",
-    "youTube",
-    "iframe"
-  ],
-  freeBox: ["freeBox", "text", "button", "columns", "youTube", "iframe"],
+  section: ["section", "freeBox", "text", "button", "columns", "youTube"],
+  freeBox: ["freeBox", "text", "button", "columns", "youTube"],
   text: ["text"],
   button: ["button"],
-  columns: ["columns", "youTube", "iframe"],
-  youTube: ["youTube"],
-  iframe: ["iframe"]
+  columns: ["columns", "youTube"],
+  youTube: ["youTube"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -471,7 +471,6 @@ type NodeDefaultElementType = {
   button: typeof Button;
   columns: "div";
   youTube: typeof YouTube;
-  iframe: typeof Iframe;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -542,7 +541,6 @@ export const PlasmicHomepage = Object.assign(
     button: makeNodeComponent("button"),
     columns: makeNodeComponent("columns"),
     youTube: makeNodeComponent("youTube"),
-    iframe: makeNodeComponent("iframe"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
