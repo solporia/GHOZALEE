@@ -272,14 +272,10 @@
   min-width: 0;
   padding: 8px;
 }
-.youTube:global(.__wab_instance) {
-  width: 640px;
-  height: 390px;
-  max-height: 100%;
+.embedHtml__fjiO3:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
   position: relative;
-  flex-shrink: 0;
 }
 .column__kQLhu {
   display: flex;

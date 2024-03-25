@@ -62,7 +62,6 @@ import {
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import { NavigationBar } from "@plasmicpkgs/plasmic-nav";
 import Button from "../../Button"; // plasmic-import: ChY5yskcrU9C/component
-import YouTube from "@plasmicpkgs/react-youtube";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -95,7 +94,6 @@ export type PlasmicHomepage__OverridesType = {
   text?: Flex__<"div">;
   button?: Flex__<typeof Button>;
   columns?: Flex__<"div">;
-  youTube?: Flex__<typeof YouTube>;
 };
 
 export interface DefaultHomepageProps {}
@@ -398,15 +396,14 @@ function PlasmicHomepage__RenderFunc(props: {
                 className={classNames(projectcss.all, sty.columns)}
               >
                 <div className={classNames(projectcss.all, sty.column___1HyWr)}>
-                  <YouTube
-                    data-plasmic-name={"youTube"}
-                    data-plasmic-override={overrides.youTube}
-                    cc_load_policy={true}
-                    className={classNames("__wab_instance", sty.youTube)}
-                    loop={true}
-                    playsinline={false}
-                    rel={false}
-                    videoId={"watch?v=NvnO1TMN-_4"}
+                  <Embed
+                    className={classNames(
+                      "__wab_instance",
+                      sty.embedHtml__fjiO3
+                    )}
+                    code={
+                      '<iframe width="600" height="480" src="https://www.youtube.com/embed/NvnO1TMN-_4?si=t1R5WXgqhtIYeh__" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+                    }
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column__kQLhu)}>
@@ -446,17 +443,15 @@ const PlasmicDescendants = {
     "freeBox",
     "text",
     "button",
-    "columns",
-    "youTube"
+    "columns"
   ],
   navigationBar: ["navigationBar", "h4"],
   h4: ["h4"],
-  section: ["section", "freeBox", "text", "button", "columns", "youTube"],
-  freeBox: ["freeBox", "text", "button", "columns", "youTube"],
+  section: ["section", "freeBox", "text", "button", "columns"],
+  freeBox: ["freeBox", "text", "button", "columns"],
   text: ["text"],
   button: ["button"],
-  columns: ["columns", "youTube"],
-  youTube: ["youTube"]
+  columns: ["columns"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -470,7 +465,6 @@ type NodeDefaultElementType = {
   text: "div";
   button: typeof Button;
   columns: "div";
-  youTube: typeof YouTube;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -540,7 +534,6 @@ export const PlasmicHomepage = Object.assign(
     text: makeNodeComponent("text"),
     button: makeNodeComponent("button"),
     columns: makeNodeComponent("columns"),
-    youTube: makeNodeComponent("youTube"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
