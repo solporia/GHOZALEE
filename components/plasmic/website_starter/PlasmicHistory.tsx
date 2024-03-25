@@ -87,6 +87,7 @@ export type PlasmicHistory__OverridesType = {
   root?: Flex__<"div">;
   embedHtml?: Flex__<typeof Embed>;
   navigationBar?: Flex__<typeof NavigationBar>;
+  h4?: Flex__<"h4">;
   section?: Flex__<"section">;
   h1?: Flex__<"h1">;
   columns?: Flex__<"div">;
@@ -168,30 +169,31 @@ function PlasmicHistory__RenderFunc(props: {
                 className={classNames(
                   projectcss.all,
                   projectcss.a,
-                  sty.link__pXcv5
+                  sty.link__mgJo9
                 )}
                 component={Link}
                 href={`/`}
                 platform={"nextjs"}
               >
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__hrEkw)}
-                  displayHeight={"40px"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"none"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  src={"https://static1.plasmic.app/nav-logo-placeholder.svg"}
-                />
+                <h4
+                  data-plasmic-name={"h4"}
+                  data-plasmic-override={overrides.h4}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.h4,
+                    projectcss.__wab_text,
+                    sty.h4
+                  )}
+                >
+                  {"GHOZALEE RWA"}
+                </h4>
               </PlasmicLink__>
             }
             className={classNames("__wab_instance", sty.navigationBar)}
             closeButton={
               <PlasmicImg__
                 alt={""}
-                className={classNames(sty.img___7NbDq)}
+                className={classNames(sty.img___9IrK)}
                 displayHeight={"auto"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"none"}
@@ -209,10 +211,10 @@ function PlasmicHistory__RenderFunc(props: {
                     projectcss.all,
                     projectcss.a,
                     projectcss.__wab_text,
-                    sty.link__lJOyt
+                    sty.link__m0QRs
                   )}
                   component={Link}
-                  href={"/"}
+                  href={`/history`}
                   platform={"nextjs"}
                 >
                   {"HISTORY"}
@@ -222,7 +224,7 @@ function PlasmicHistory__RenderFunc(props: {
                     projectcss.all,
                     projectcss.a,
                     projectcss.__wab_text,
-                    sty.link__sPwDd
+                    sty.link___6Dquv
                   )}
                   component={Link}
                   href={"/"}
@@ -235,7 +237,7 @@ function PlasmicHistory__RenderFunc(props: {
                     projectcss.all,
                     projectcss.a,
                     projectcss.__wab_text,
-                    sty.link__n255X
+                    sty.link___4Lsa7
                   )}
                   component={Link}
                   href={"/"}
@@ -247,13 +249,14 @@ function PlasmicHistory__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.a,
-                    sty.link__cBrnw
+                    sty.link__dLjxS
                   )}
                   component={Link}
+                  href={"https://t.me/GhozaliRWA"}
                   platform={"nextjs"}
                 >
                   <Icon2Icon
-                    className={classNames(projectcss.all, sty.svg__bLm5)}
+                    className={classNames(projectcss.all, sty.svg___8Qwdi)}
                     role={"img"}
                   />
                 </PlasmicLink__>
@@ -261,13 +264,14 @@ function PlasmicHistory__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.a,
-                    sty.link___84EoY
+                    sty.link__qy7X
                   )}
                   component={Link}
+                  href={"https://t.me/GhozaliRWA"}
                   platform={"nextjs"}
                 >
                   <Icon4Icon
-                    className={classNames(projectcss.all, sty.svg__f3W4)}
+                    className={classNames(projectcss.all, sty.svg___857Si)}
                     role={"img"}
                   />
                 </PlasmicLink__>
@@ -275,13 +279,13 @@ function PlasmicHistory__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.a,
-                    sty.link__fFOgf
+                    sty.link___2ZBDz
                   )}
                   component={Link}
                   platform={"nextjs"}
                 >
                   <Icon3Icon
-                    className={classNames(projectcss.all, sty.svg__qqvnv)}
+                    className={classNames(projectcss.all, sty.svg__uOorU)}
                     role={"img"}
                   />
                 </PlasmicLink__>
@@ -289,14 +293,14 @@ function PlasmicHistory__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.a,
-                    sty.link__aaEi
+                    sty.link___1UBfZ
                   )}
                   component={Link}
                   platform={"nextjs"}
                 >
                   <PlasmicImg__
                     alt={""}
-                    className={classNames(sty.img__jDmcm)}
+                    className={classNames(sty.img__fUd1Z)}
                     displayHeight={"42px"}
                     displayMaxHeight={"none"}
                     displayMaxWidth={"100%"}
@@ -317,7 +321,7 @@ function PlasmicHistory__RenderFunc(props: {
             openButton={
               <PlasmicImg__
                 alt={""}
-                className={classNames(sty.img__h3LUr)}
+                className={classNames(sty.img__aIpao)}
                 displayHeight={"auto"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"none"}
@@ -411,13 +415,15 @@ const PlasmicDescendants = {
     "root",
     "embedHtml",
     "navigationBar",
+    "h4",
     "section",
     "h1",
     "columns",
     "text"
   ],
   embedHtml: ["embedHtml"],
-  navigationBar: ["navigationBar"],
+  navigationBar: ["navigationBar", "h4"],
+  h4: ["h4"],
   section: ["section", "h1", "columns", "text"],
   h1: ["h1"],
   columns: ["columns", "text"],
@@ -430,6 +436,7 @@ type NodeDefaultElementType = {
   root: "div";
   embedHtml: typeof Embed;
   navigationBar: typeof NavigationBar;
+  h4: "h4";
   section: "section";
   h1: "h1";
   columns: "div";
@@ -498,6 +505,7 @@ export const PlasmicHistory = Object.assign(
     // Helper components rendering sub-elements
     embedHtml: makeNodeComponent("embedHtml"),
     navigationBar: makeNodeComponent("navigationBar"),
+    h4: makeNodeComponent("h4"),
     section: makeNodeComponent("section"),
     h1: makeNodeComponent("h1"),
     columns: makeNodeComponent("columns"),

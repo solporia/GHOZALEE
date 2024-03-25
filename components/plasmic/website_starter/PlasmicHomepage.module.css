@@ -57,12 +57,13 @@
   min-width: 0;
   padding: 0px;
 }
-.img__wQaKk {
-  object-fit: cover;
-  height: 40px;
-}
-.img__wQaKk > picture > img {
-  object-fit: cover;
+.h4 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: #ffffff;
+  min-width: 0;
 }
 .img__pSaHy {
   object-fit: cover;

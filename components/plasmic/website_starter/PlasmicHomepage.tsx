@@ -90,6 +90,7 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
   navigationBar?: Flex__<typeof NavigationBar>;
+  h4?: Flex__<"h4">;
   section?: Flex__<"section">;
   freeBox?: Flex__<"div">;
   text?: Flex__<"div">;
@@ -178,17 +179,18 @@ function PlasmicHomepage__RenderFunc(props: {
                 href={"#"}
                 platform={"nextjs"}
               >
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__wQaKk)}
-                  displayHeight={"40px"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"none"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  src={"https://static1.plasmic.app/nav-logo-placeholder.svg"}
-                />
+                <h4
+                  data-plasmic-name={"h4"}
+                  data-plasmic-override={overrides.h4}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.h4,
+                    projectcss.__wab_text,
+                    sty.h4
+                  )}
+                >
+                  {"GHOZALEE RWA"}
+                </h4>
               </PlasmicLink__>
             }
             className={classNames("__wab_instance", sty.navigationBar)}
@@ -429,6 +431,7 @@ const PlasmicDescendants = {
   root: [
     "root",
     "navigationBar",
+    "h4",
     "section",
     "freeBox",
     "text",
@@ -437,7 +440,8 @@ const PlasmicDescendants = {
     "youTube",
     "iframe"
   ],
-  navigationBar: ["navigationBar"],
+  navigationBar: ["navigationBar", "h4"],
+  h4: ["h4"],
   section: [
     "section",
     "freeBox",
@@ -460,6 +464,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   navigationBar: typeof NavigationBar;
+  h4: "h4";
   section: "section";
   freeBox: "div";
   text: "div";
@@ -530,6 +535,7 @@ export const PlasmicHomepage = Object.assign(
   {
     // Helper components rendering sub-elements
     navigationBar: makeNodeComponent("navigationBar"),
+    h4: makeNodeComponent("h4"),
     section: makeNodeComponent("section"),
     freeBox: makeNodeComponent("freeBox"),
     text: makeNodeComponent("text"),
