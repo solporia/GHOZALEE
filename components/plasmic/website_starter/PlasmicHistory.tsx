@@ -169,10 +169,10 @@ function PlasmicHistory__RenderFunc(props: {
                 className={classNames(
                   projectcss.all,
                   projectcss.a,
-                  sty.link__mgJo9
+                  sty.link___0MqMb
                 )}
                 component={Link}
-                href={`/`}
+                href={"#"}
                 platform={"nextjs"}
               >
                 <h4
@@ -193,7 +193,7 @@ function PlasmicHistory__RenderFunc(props: {
             closeButton={
               <PlasmicImg__
                 alt={""}
-                className={classNames(sty.img___9IrK)}
+                className={classNames(sty.img__yaEa5)}
                 displayHeight={"auto"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"none"}
@@ -211,7 +211,7 @@ function PlasmicHistory__RenderFunc(props: {
                     projectcss.all,
                     projectcss.a,
                     projectcss.__wab_text,
-                    sty.link__m0QRs
+                    sty.link__x2YEm
                   )}
                   component={Link}
                   href={`/history`}
@@ -224,7 +224,7 @@ function PlasmicHistory__RenderFunc(props: {
                     projectcss.all,
                     projectcss.a,
                     projectcss.__wab_text,
-                    sty.link___6Dquv
+                    sty.link__xuDva
                   )}
                   component={Link}
                   href={"/"}
@@ -237,11 +237,14 @@ function PlasmicHistory__RenderFunc(props: {
                     projectcss.all,
                     projectcss.a,
                     projectcss.__wab_text,
-                    sty.link___4Lsa7
+                    sty.link__cPvJw
                   )}
                   component={Link}
-                  href={"/"}
+                  href={
+                    "https://solscan.io/token/44u79MNZ4fKxCb2vNrdRZJfpmnuZAQHtRGYu5xseQ1xf"
+                  }
                   platform={"nextjs"}
+                  target={"_blank"}
                 >
                   {"CONTRACT"}
                 </PlasmicLink__>
@@ -249,14 +252,14 @@ function PlasmicHistory__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.a,
-                    sty.link__dLjxS
+                    sty.link___3ZnoO
                   )}
                   component={Link}
                   href={"https://t.me/GhozaliRWA"}
                   platform={"nextjs"}
                 >
                   <Icon2Icon
-                    className={classNames(projectcss.all, sty.svg___8Qwdi)}
+                    className={classNames(projectcss.all, sty.svg__qhCzS)}
                     role={"img"}
                   />
                 </PlasmicLink__>
@@ -264,14 +267,14 @@ function PlasmicHistory__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.a,
-                    sty.link__qy7X
+                    sty.link___7XZz1
                   )}
                   component={Link}
-                  href={"https://t.me/GhozaliRWA"}
+                  href={"https://twitter.com/GhozaliRWA"}
                   platform={"nextjs"}
                 >
                   <Icon4Icon
-                    className={classNames(projectcss.all, sty.svg___857Si)}
+                    className={classNames(projectcss.all, sty.svg__xamtw)}
                     role={"img"}
                   />
                 </PlasmicLink__>
@@ -279,13 +282,13 @@ function PlasmicHistory__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.a,
-                    sty.link___2ZBDz
+                    sty.link__c7D44
                   )}
                   component={Link}
                   platform={"nextjs"}
                 >
                   <Icon3Icon
-                    className={classNames(projectcss.all, sty.svg__uOorU)}
+                    className={classNames(projectcss.all, sty.svg__mchQx)}
                     role={"img"}
                   />
                 </PlasmicLink__>
@@ -293,14 +296,14 @@ function PlasmicHistory__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.a,
-                    sty.link___1UBfZ
+                    sty.link___9MYgf
                   )}
                   component={Link}
                   platform={"nextjs"}
                 >
                   <PlasmicImg__
                     alt={""}
-                    className={classNames(sty.img__fUd1Z)}
+                    className={classNames(sty.img__sWlo1)}
                     displayHeight={"42px"}
                     displayMaxHeight={"none"}
                     displayMaxWidth={"100%"}
@@ -321,7 +324,7 @@ function PlasmicHistory__RenderFunc(props: {
             openButton={
               <PlasmicImg__
                 alt={""}
-                className={classNames(sty.img__aIpao)}
+                className={classNames(sty.img__rHdjd)}
                 displayHeight={"auto"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"none"}

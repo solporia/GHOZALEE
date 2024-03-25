@@ -240,8 +240,11 @@ function PlasmicHomepage__RenderFunc(props: {
                     sty.link__x1OGa
                   )}
                   component={Link}
-                  href={"/"}
+                  href={
+                    "https://solscan.io/token/44u79MNZ4fKxCb2vNrdRZJfpmnuZAQHtRGYu5xseQ1xf"
+                  }
                   platform={"nextjs"}
+                  target={"_blank"}
                 >
                   {"CONTRACT"}
                 </PlasmicLink__>
@@ -267,7 +270,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     sty.link__nNOxu
                   )}
                   component={Link}
-                  href={"https://t.me/GhozaliRWA"}
+                  href={"https://twitter.com/GhozaliRWA"}
                   platform={"nextjs"}
                 >
                   <Icon4Icon
