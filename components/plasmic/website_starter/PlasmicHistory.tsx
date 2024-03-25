@@ -185,7 +185,7 @@ function PlasmicHistory__RenderFunc(props: {
                     sty.h4
                   )}
                 >
-                  {"GHOZALEE RWA"}
+                  {"GHOZALI RWA"}
                 </h4>
               </PlasmicLink__>
             }
